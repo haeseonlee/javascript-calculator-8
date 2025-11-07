@@ -25,10 +25,20 @@ class Calculator {
     // 문자열 배열 숫자 배열로 바꾸기
     let numbers = stringNumbers.map(Number);
 
+    // 음수 값 입력시 예외 발생
     for (let number in numbers) {
       if (number < 0) {
         throw new Error("[ERROR] 음수 값은 입력할 수 없습니다.");
       }
     }
+
+    // 배열의 합 구하기
+    let sum = numbers.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
+    return sum;
   }
 }
+
+export default Calculator;
