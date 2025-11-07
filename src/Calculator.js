@@ -17,5 +17,6 @@ class Calculator {
     }
 
     // 문자열 배열 숫자 배열로 바꾸기
+    let numbers = stringNumbers.map(Number);
   }
 }
