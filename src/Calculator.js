@@ -4,5 +4,16 @@ class Calculator {
     if (!input.trim()) {
       return 0;
     }
+
+    // 입력받은 문자열을 분리한다.
+    let numbers = [];
+
+    const customDelimiter = input.match("/^//(.)\\n(.*)$/");
+    if (customDelimiter) {
+      const delimiter = customDelimiter[1];
+      numbers = customDelimiter[2].split(delimiter);
+    } else {
+      numbers = input.split(/[,|:]/);
+    }
   }
 }
