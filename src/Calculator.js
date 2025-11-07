@@ -16,6 +16,12 @@ class Calculator {
       stringNumbers = input.split(/[,|:]/);
     }
 
+    for (let s in stringNumbers) {
+      if (isNaN(s)) {
+        throw new Error("[ERROR] 숫자를 입력해 주세요.");
+      }
+    }
+
     // 문자열 배열 숫자 배열로 바꾸기
     let numbers = stringNumbers.map(Number);
   }
