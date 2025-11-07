@@ -24,5 +24,11 @@ class Calculator {
 
     // 문자열 배열 숫자 배열로 바꾸기
     let numbers = stringNumbers.map(Number);
+
+    for (let number in numbers) {
+      if (number < 0) {
+        throw new Error("[ERROR] 음수 값은 입력할 수 없습니다.");
+      }
+    }
   }
 }
