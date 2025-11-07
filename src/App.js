@@ -9,7 +9,7 @@ class App {
 
     const calculator = new Calculator();
 
-    const result = calculator.add(input);
+    const result = calculator.calculate(input);
 
     MissionUtils.Console.print(`결과 : ${result}`);
   }
