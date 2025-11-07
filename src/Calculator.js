@@ -16,7 +16,7 @@ class Calculator {
       stringNumbers = input.split(/[,:]/);
     }
 
-    for (let s in stringNumbers) {
+    for (let s of stringNumbers) {
       if (isNaN(s)) {
         throw new Error("[ERROR] 숫자를 입력해 주세요.");
       }
@@ -26,7 +26,7 @@ class Calculator {
     let numbers = stringNumbers.map(Number);
 
     // 음수 값 입력시 예외 발생
-    for (let number in numbers) {
+    for (let number of numbers) {
       if (number < 0) {
         throw new Error("[ERROR] 음수 값은 입력할 수 없습니다.");
       }
