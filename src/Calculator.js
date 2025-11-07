@@ -6,14 +6,16 @@ class Calculator {
     }
 
     // 입력받은 문자열을 분리한다.
-    let numbers = [];
+    let stringNumbers = [];
 
     const customDelimiter = input.match("/^//(.)\\n(.*)$/");
     if (customDelimiter) {
       const delimiter = customDelimiter[1];
-      numbers = customDelimiter[2].split(delimiter);
+      stringNumbers = customDelimiter[2].split(delimiter);
     } else {
-      numbers = input.split(/[,|:]/);
+      stringNumbers = input.split(/[,|:]/);
     }
+
+    // 문자열 배열 숫자 배열로 바꾸기
   }
 }
