@@ -8,7 +8,7 @@ class Calculator {
     // 입력받은 문자열을 분리한다.
     let stringNumbers = [];
 
-    const customDelimiter = input.match(/^\/\/(.)\n(.*)$/);
+    const customDelimiter = input.match(/^\/\/(.)\\n(.*)$/);
     if (customDelimiter) {
       const delimiter = customDelimiter[1];
       stringNumbers = customDelimiter[2].split(delimiter);
