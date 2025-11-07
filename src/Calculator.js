@@ -13,7 +13,7 @@ class Calculator {
       const delimiter = customDelimiter[1];
       stringNumbers = customDelimiter[2].split(delimiter);
     } else {
-      stringNumbers = input.split(/[,|:]/);
+      stringNumbers = input.split(/[,:]/);
     }
 
     for (let s in stringNumbers) {
